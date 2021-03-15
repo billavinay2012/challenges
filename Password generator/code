@@ -1,26 +1,29 @@
 import random
 import string
 
-n=int(input("Enter length of password of length 8 to 20: "))
 lowerletters=list(string.ascii_lowercase)
 upperletters=list(string.ascii_uppercase)
 nums=[1,2,3,4,5,6,7,8,9,0]
 symbols=['@','_','$']
 
 while True:
-    password=""
-    password+=symbols[random.randint(0,2)]
-    for i in range(n-1):
-        temp= random.randint(1,3)
-        if temp==1:
-            password+=lowerletters[random.randint(0,len(lowerletters)-1)]
-        if temp==2:
-            password+=upperletters[random.randint(0,len(upperletters)-1)]
-        if temp==3:
-            password+=str(nums[random.randint(0,len(nums)-1)])
-    password_list=list(password)
-    random.shuffle(password_list)
-    password=''.join(password_list)
-    print(password)
-    if input("Continue?")=='n':
+    n=int(input("Enter length of password of length 8 to 20: "))
+    if 8<=n<=20:
+        password=""
+        password+=symbols[random.randint(0,2)]
+        for i in range(n-1):
+            temp= random.randint(1,3)
+            if temp==1:
+                password+=lowerletters[random.randint(0,len(lowerletters)-1)]
+            if temp==2:
+                    password+=upperletters[random.randint(0,len(upperletters)-1)]
+            if temp==3:
+                password+=str(nums[random.randint(0,len(nums)-1)])
+        password_list=list(password)
+        random.shuffle(password_list)
+        password=''.join(password_list)
+        print(password)
+    else:
+        print("Please enter a valid number!")
+    if input("Enter 'n' to exit or any else input to continue: ")=='n':
         break
