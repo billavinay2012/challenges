@@ -1,3 +1,5 @@
+#pip install pyautogui
+
 import pyautogui
 import string
 import random
