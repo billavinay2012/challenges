@@ -1,5 +1,8 @@
 import random
 import string
+from generate_easy_words import easy_word_list
+from generate_medium_words import medium_word_list
+from generate_hard_words import hard_word_list
 
 def changes(element,index):
     global answer
@@ -48,7 +51,7 @@ while lives>0 and ''.join(answer)!=''.join(word_to_be_guessed):
 if lives>0:
     print("Congrats you have correctly guessed ".join(word_to_be_guessed))
 else:
-    print("Oh no! The correct word is ".join(word_to_be_guessed))
+    print("Oh no! The correct word is "+str(word_to_be_guessed))
 
 
 
