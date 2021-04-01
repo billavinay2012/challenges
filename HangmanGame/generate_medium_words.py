@@ -7,7 +7,6 @@ while True:
         medium_word_list.append('spine')
         break
     medium_word_list.append(n[:len(n)-1])
-print(medium_word_list)
 
 
 

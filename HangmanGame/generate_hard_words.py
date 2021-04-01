@@ -7,7 +7,6 @@ while True:
         hard_word_list.append('zombie')
         break
     hard_word_list.append(n[:len(n)-1])
-print(hard_word_list)
 
 
 
